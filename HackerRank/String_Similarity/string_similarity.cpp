@@ -5,6 +5,7 @@ using namespace std;
 string ltrim(const string &);
 string rtrim(const string &);
 
+
 /*
  * Complete the 'stringSimilarity' function below.
  *
@@ -13,28 +14,31 @@ string rtrim(const string &);
  */
 
 int stringSimilarity(string s) {
-
+    int similarity = s.length();
+    int similarityCounter = 0;
+    string suffix;
+    
+    for (int i = 1; i < s.length(); i++) {   
+        suffix = s.substr(i);
+        similarityCounter = 0;
+        for (int c = 0; c < suffix.length(); c++)        
+            if (suffix[c] == s[c]){
+                similarityCounter++;
+            }else{
+                break;
+            }
+        similarity = similarity + similarityCounter;
+    }
+    return similarity;
 }
 
 int main()
 {
-    ofstream fout(getenv("OUTPUT_PATH"));
+    string s = "ababaa";
+    int result = stringSimilarity(s);
 
-    string t_temp;
-    getline(cin, t_temp);
+    printf("%s\n", result);
 
-    int t = stoi(ltrim(rtrim(t_temp)));
-
-    for (int t_itr = 0; t_itr < t; t_itr++) {
-        string s;
-        getline(cin, s);
-
-        int result = stringSimilarity(s);
-
-        fout << result << "\n";
-    }
-
-    fout.close();
 
     return 0;
 }
