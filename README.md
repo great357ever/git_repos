@@ -3,6 +3,9 @@ repo for everyday files, coding challenges, coursera and backups
 
 ## HackerRank
 ### String Similarity
-https://www.hackerrank.com/challenges/string-similarity/problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign
+https://www.hackerrank.com/challenges/string-similarity/
+
+### 2D Array
+https://www.hackerrank.com/challenges/2d-array/problem
 
 ## Coursera
